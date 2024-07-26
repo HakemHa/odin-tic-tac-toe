@@ -16,7 +16,7 @@ class TicTacToe
     loc = 1
     while (!@grid.match?(loc)) && (@grid.available().length() != 0)
       @grid.render()
-      print("#{@players[turn].name}'s turn. ")
+      print("#{@players[turn].name}'s (#{sym[turn]}) turn. ")
       loc = (@players[turn].play(@grid.available()))
       @grid.set(loc, sym[turn])
       turn = (turn+1)%2
